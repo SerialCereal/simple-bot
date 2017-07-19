@@ -15,4 +15,4 @@ client.on('message', message => {
 });
 
 client.login('insert_token_here')
-// The code above lets the client login using its token. 
+// The code above lets the client login using its unique token. 
