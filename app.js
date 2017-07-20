@@ -12,6 +12,16 @@ client.on('message', message => {
         message.channel.send('PONG!');
     }
     // The code above is constructed of two things: message.content and message.channel.send. Translation: If the content of the message equals the message '!ping!, print a message in the same channel stating 'PONG!'.
+function rolldice() {
+  var rand = ['**1.**', '**2.**', '**3.**', '**4.**', '**5.**', '**6.**'];
+
+  return rand[Math.floor(Math.random() * rand.length)];
+}
+    // This creates a function called rolldice and sets random variables for it.
+if (message.content === ("!rolldice")) {
+  message.channel.send('You rolled ' + rolldice());
+}    
+    // This code not only executes a response, but also executes the function rolldice by using one of the random variables (refer to comment above).
 });
 
 client.login('insert_token_here')
