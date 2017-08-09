@@ -8,9 +8,11 @@ const client = new Discord.Client();
 });
 // The code above prints a message when the bot is started.
 client.on('message', message => {
-      let prefix = "!;
+      let prefix = "!";
    // The code above creates a prefix !
+    
   if (!message.content.startsWith(prefix)) return;
+    
          if(message.content === (prefix + 'ping')){
         message.channel.send('PONG!');
     }
